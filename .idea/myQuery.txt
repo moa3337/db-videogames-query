@@ -25,3 +25,31 @@
     ON videogames.id = reviews.id
     WHERE reviews.rating = 5;
 
+*** SOLUZIONI GROUP BY ***
+
+1) SELECT country, COUNT(*) AS number_software_house FROM software_houses GROUP BY country;
+
+2) SELECT videogames.id,
+   COUNT(*) AS review_numbers
+   FROM videogames
+   JOIN reviews
+   ON videogames.id = reviews.id
+   GROUP BY videogames.id;
+
+3) SELECT pegi_labels.id,
+   COUNT(*) AS videogame_numbers
+   FROM videogames JOIN pegi_labels
+   ON videogames.id = pegi_labels.id
+   GROUP BY pegi_labels.id;
+
+4) SELECT release_date, COUNT(*) AS videogame_numbers FROM videogames GROUP BY release_date; *
+
+5) SELECT devices.id,
+   COUNT(*) AS videogame_numbers
+   FROM videogames
+   JOIN devices
+   ON videogames.id = devices.id
+   GROUP BY devices.id;
+
+6)
+
