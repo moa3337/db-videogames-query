@@ -1,0 +1,27 @@
+*** SOLUZIONI SELECT ***
+
+1) SELECT * FROM `software_houses` WHERE country = 'United States';
+
+2) SELECT * FROM `players` WHERE city = 'Rogahnland';
+
+3) SELECT * FROM `players` WHERE name LIKE '%a';
+
+4) SELECT * FROM `reviews` WHERE player_id = '800';
+
+5)
+
+6) SELECT * FROM `awards` WHERE description LIKE '%facere%';
+
+7) SELECT DISTINCT id FROM category_videogame WHERE category_id IN (2, 6); *
+
+8) SELECT * FROM `reviews` WHERE rating BETWEEN 2 AND 4;
+
+9) SELECT * FROM `videogames` WHERE YEAR(release_date) = 2020;
+
+10) SELECT
+    DISTINCT videogames.id
+    FROM videogames
+    JOIN reviews
+    ON videogames.id = reviews.id
+    WHERE reviews.rating = 5;
+
